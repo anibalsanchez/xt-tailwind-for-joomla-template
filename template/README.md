@@ -1,1 +1,0 @@
-# -XT-Tailwind-for-Joomla-template
