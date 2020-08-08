@@ -1,6 +1,6 @@
 {
   "name": "xt-tailwind-for-joomla",
-  "version": "3.4.0",
+  "version": "3.8.0",
   "description": "XT Tailwind - My Blog template, based on Tailwind CSS.",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
@@ -16,11 +16,11 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@tailwindcss/custom-forms": "^0.2.1",
-    "@tailwindcss/ui": "^0.3.1",
+    "@tailwindcss/ui": "^0.5.0",
     "browser-sync-webpack-plugin": "^2.2.2",
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.26.12",
     "cross-env": "^7.0",
-    "css-loader": "^3.6.0",
+    "css-loader": "^4.2.1",
     "cssnano-preset-advanced": "^4.0.7",
     "cssnano": "^4.1.10",
     "filemanager-webpack-plugin": "^2.0.5",
@@ -33,10 +33,10 @@
     "postcss-nested": "^4.2.3",
     "postcss": "^7.0.32",
     "style-loader": "^1.2.1",
-    "tailwindcss": "^1.5.2",
+    "tailwindcss": "^1.6.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack": "^4.44.0"
+    "webpack": "^4.44.1"
   },
   "config": {
     "proxyURL": "http://localhost:8080/index.php",
