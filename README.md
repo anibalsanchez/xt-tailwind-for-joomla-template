@@ -1,4 +1,4 @@
-# XT Tailwind for Joomla
+# XT Tailwind for Joomla - The template
 
 For future reference:
 
@@ -8,32 +8,12 @@ For future reference:
 
 **Prerequisites**: Before you use this template, you must install [Node.js](https://nodejs.org/).
 
-The project has two levels:
+The project has two repositories:
 
-- The Joomla extension build files at the `root` folder
-- The Tailwind template in the `template` folder
+- **The Joomla extension build files**, in this repository: [anibalsanchez/xt-tailwind-css](https://github.com/anibalsanchez/XT-Tailwind-for-Joomla).
+- **The Tailwind template itself**, in this repository: [anibalsanchez/xt-tailwind-for-joomla-template](https://github.com/anibalsanchez/xt-tailwind-for-joomla-template). The dependency is managed with the composer plugin [mnsami/composer-custom-directory-installer](https://github.com/mnsami/composer-custom-directory-installer) to download the template files in the the `template` folder.
 
-## The Joomla extension build files
-
-To build the extension to create the installer package:
-
-For more information about the build scripts, please, visit [anibalsanchez/extly-buildfiles-for-joomla](https://github.com/anibalsanchez/extly-buildfiles-for-joomla).
-
-```bash
-# Using npm
-npm install
-npm run build
-```
-
-As an alternative, there is a script with everything that must be done for each build:
-
-```bash
-./build/build_core.sh
-```
-
-These steps create the installable package in the `build/release` directory.
-
-The original XT build files, used to manage the extension development, can be found here [anibalsanchez/extly-buildfiles-for-joomla](https://github.com/anibalsanchez/extly-buildfiles-for-joomla).
+To build the extension to package everything to have it ready for installation, please go to [anibalsanchez/xt-tailwind-css](https://github.com/anibalsanchez/XT-Tailwind-for-Joomla).
 
 ## The Tailwind template
 
@@ -58,8 +38,6 @@ The HTML pages must be declared in `webpack.config.js`.
 To get started, clone the project and install the dependencies:
 
 ```bash
-# Access to the repo folder where the template is developed
-cd template
 # Using npm
 npm install
 ```
@@ -67,7 +45,6 @@ npm install
 After the dependencies installation step, start the Webpack Development Server:
 
 ```bash
-cd template
 npm i
 npm run dev
 ```
@@ -83,7 +60,6 @@ Beyond the basic development alternatives, now I'm adding the choice to develop 
 So, first, create the template as an installable extension:
 
 ```bash
-cd template
 npm i
 npm run prod
 ```
@@ -126,85 +102,6 @@ This is the final step to produce the compressed and optimized template. To buil
 npm i
 npm run prod
 ```
-
-After that, you will have a ready to deploy bundle at `/dist`. Then, zip all files (exclude the node_modules folder) and install it on a Joomla site.
-
-To build everything and produce the installable template:
-
-```bash
-./build/build_core.sh
-```
-
-## Changelog
-
-### 3.7.0
-
-- Update Tailwind 1.5.2
-- Add Typography plugin
-
-### 3.6.0
-
-- Component, Error and Off-line pages
-
-### 3.5.0
-
-- Add XT Renderers library
-
-### 3.4.0
-
-- Update to Tailwind CSS v1.4
-- Reorganization of the build scripts
-
-### 3.3.5
-
-- Update to Tailwind CSS v1.3.5
-
-### 3.3.0
-
-Update to Tailwind CSS v1.2.0, including Tailwind UI support.
-
-- Tailwind CSS v1.2.0
-- Support of [Tailwind UI](https://tailwindui.com/)
-- Addition of PostCSS best practices, [postcss-import](https://www.npmjs.com/package/postcss-import) and [postcss-nested](https://www.npmjs.com/package/postcss-nested)
-- Minimum tailwind.config.js
-- Pagination Component implementation
-
-### 3.2.0
-
-- Support of Proxy Mode for Webpack / Tailwind CSS
-- Webpack Proxy support
-
-### 3.1.0
-
-- Minor library updates
-- Styling
-
-### 3.0.0
-
-- Implementation of the [HTML Asset Tags Builder](https://github.com/anibalsanchez/extly-html-asset-tags-builder)
-  - InlineScriptTag
-  - InlineStyleTag
-  - LinkCriticalStylesheetTag
-  - LinkPreloadStylesheetTag
-  - LinkStylesheetTag
-  - ScriptTag
-
-### 2.1.0
-
-- Update to Tailwind CSS v1.1.0
-
-### 2.0.3
-
-- Update to Tailwind CSS v1.0.3
-
-### 2.0.0
-
-- Update to Tailwind CSS v1.0.0-beta.1
-
-### 1.0.0
-
-- Initial version
-- Tailwind CSS v0.7.4.
 
 ## Acknowledgements
 
