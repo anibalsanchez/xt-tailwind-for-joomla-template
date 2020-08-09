@@ -214,6 +214,14 @@
   }
 }
 
+div.blog-block.prose > div.blog-featured > div.pagination > ul > li {
+  @apply pl-0;
+}
+
+div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
+  content: none !important;
+}
+
 .pager {
   @apply flex-1 flex justify-between pl-0;
 
