@@ -49,10 +49,10 @@ $itemid = $app->input->getCmd('Itemid', '');
 $siteName = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
 $mediaversion = (new CMSVersion())->getMediaVersion();
 
-// Add template js - JavaScript to be deferred
-$templateJsFile = CMSHTMLHelper::script('template.js', ['relative' => true, 'pathOnly' => true]);
-$templateJsFile = $templateJsFile.'?'.$mediaversion;
-$htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($templateJsFile)));
+// Add template js - JavaScript to be deferred - Removed to Optimize
+// $templateJsFile = CMSHTMLHelper::script('template.js', ['relative' => true, 'pathOnly' => true]);
+// $templateJsFile = $templateJsFile.'?'.$mediaversion;
+// $htmlAssetRepository->push(ScriptTag::create(ScriptHelper::addMediaVersion($templateJsFile)));
 
 // Add template.css
 $templateCssFile = CMSHTMLHelper::stylesheet('template.css', ['relative' => true, 'pathOnly' => true]);
@@ -165,7 +165,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
             </div>
 
             <!-- blog-block -->
-            <div class="blog-block prose md:prose-xl">
+            <div class="blog-block prose">
               <!-- Begin Content -->
               <jdoc:include type="message" />
               <jdoc:include type="component" />

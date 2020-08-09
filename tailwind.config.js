@@ -67,5 +67,9 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [customForms, tailwindCssUi, typography],
+  plugins: [
+    customForms,
+    tailwindCssUi,
+    typography
+  ],
 };

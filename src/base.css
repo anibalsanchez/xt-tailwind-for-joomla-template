@@ -70,10 +70,10 @@ h5 {
   @apply text-lg mt-4 mb-2 tracking-wide font-bold;
 }
 
-ul {
+/* ul {
   @apply my-6 list-disc pl-4;
   padding-inline-start: 1rem;
-}
+} */
 
 li > ul {
   @apply mt-0;
