@@ -38,12 +38,23 @@
   }
 
   li.lang-active a {
-    text-decoration: underline!important;
+    text-decoration: underline !important;
   }
 }
 
 .about-me img {
   @apply rounded-full;
+}
+
+.aside-block {
+  ul {
+    @apply my-6 list-disc pl-4;
+    padding-inline-start: 1rem;
+  }
+
+  li > ul {
+    @apply mt-0;
+  }
 }
 
 .main-container-block {
