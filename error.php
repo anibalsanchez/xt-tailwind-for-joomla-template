@@ -12,6 +12,16 @@
 
 defined('_JEXEC') or die;
 
+// Sentry: Application Monitoring and Error Tracking Software
+// To integrate "XT Sentry for Joomla" - https://github.com/anibalsanchez/XT-Sentry-for-Joomla
+if (file_exists(JPATH_SITE.'/cli/sentry.php')) {
+    require_once JPATH_SITE.'/cli/sentry.php';
+
+    if ($this->error instanceof \Throwable) {
+        \Sentry\captureException($this->error);
+    }
+}
+
 require_once JPATH_ROOT.'/libraries/xttailwind/vendor/autoload.php';
 
 use Extly\Infrastructure\Service\Cms\Joomla\ScriptHelper;
