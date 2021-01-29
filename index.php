@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2012-2020 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2021 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -157,7 +157,7 @@ $siteDescription = htmlspecialchars($params->get('siteDescription'), ENT_QUOTES,
     <div class="absolute z-40 w-full top-32-lite py-8 px-4 lg:px-0">
       <div class="container mx-auto">
 
-        <div class="flex flex-wrap sm:flex-no-wrap">
+        <div class="flex flex-wrap sm:flex-nowrap">
           <div class="w-full sm:w-2/3 sm:pr-4">
             <!-- breadcrumbs-block -->
             <div class="breadcrumbs-block">

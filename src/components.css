@@ -34,7 +34,7 @@
   }
 
   a {
-    @apply inline-block pl-2 whitespace-no-wrap text-sm;
+    @apply inline-block pl-2 whitespace-nowrap text-sm;
   }
 
   li.lang-active a {
@@ -69,7 +69,7 @@
   @apply flex-row pr-4 bg-grey-light opacity-50 rounded;
 
   li {
-    @apply flex-initial whitespace-no-wrap px-2 py-2;
+    @apply flex-initial whitespace-nowrap px-2 py-2;
   }
 
   ul {
@@ -185,7 +185,7 @@
     @apply flex-1 flex items-center justify-between;
 
     ul {
-      @apply relative z-0 flex-none inline-flex shadow-sm;
+      @apply list-none relative z-0 flex-none inline-flex shadow-sm;
     }
 
     li {

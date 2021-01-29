@@ -1,28 +1,44 @@
-// tailwind.config.js
-const defaultTheme = require('tailwindcss/defaultTheme');
-const customForms = require('@tailwindcss/custom-forms');
-const tailwindCssUi = require('@tailwindcss/ui')({
+/**
+ * @author     Extly, CB <team@extly.com>
+ * @copyright  Copyright (c)2012-2021 Extly, CB All rights reserved.
+ * @license    GNU General Public License version 3 or later; see LICENSE.txt
+ *
+ * @see       https://www.extly.com
+ */
+
+const aspectRatio = require('@tailwindcss/aspect-ratio');
+const forms = require('@tailwindcss/forms');
+const lineClamp = require('@tailwindcss/line-clamp');
+const typography = require('@tailwindcss/typography');
+const ui = require('@tailwindcss/ui')({
   layout: 'sidebar',
 });
-const typography = require('@tailwindcss/typography');
+
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  // Purge and minification on PostCSS, postcss.config.js
-  purge: false,
+  purge: ['./html/**/*.php', './src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
 
   theme: {
     extend: {
-      screens: defaultTheme.screens,
+      // screens: defaultTheme.screens,
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
+
       colors: {
         // My Colors
         'blue-happy': '#2d6987',
-        'extly': '#ff8900',
+        extly: '#ff8900',
         'grey-dark': '#0d0d0d',
         'grey-light': '#f5f5f5',
-        'grey': '#666',
-        'link': '#ffa32b',
+        grey: '#666',
+        link: '#ffa32b',
         'not-so-black': '#22292f',
-        'oldlace': '#fff6e9',
+        oldlace: '#fff6e9',
         'orange-hot': '#9b6f37',
       },
       spacing: {
@@ -48,7 +64,7 @@ module.exports = {
       },
       opacity: {
         // One more ...
-        '90': '0.90',
+        90: '0.90',
 
         ...defaultTheme.opacity,
       },
@@ -68,8 +84,10 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    customForms,
-    tailwindCssUi,
-    typography
+    aspectRatio,
+    forms,
+    lineClamp,
+    typography,
+    ui,
   ],
 };

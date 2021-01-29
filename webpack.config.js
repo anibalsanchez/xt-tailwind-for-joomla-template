@@ -1,6 +1,6 @@
 /**
  * @author     Extly, CB <team@extly.com>
- * @copyright  Copyright (c)2012-2020 Extly, CB All rights reserved.
+ * @copyright  Copyright (c)2012-2021 Extly, CB All rights reserved.
  * @license    GNU General Public License version 3 or later; see LICENSE.txt
  *
  * @see       https://www.extly.com
@@ -9,7 +9,7 @@
 // Define the pages to be prototyped
 const prototypePages = [
   'index',
-  'blog-post'
+  'blog-post',
 ];
 
 // Declaration of Webpack plugins
@@ -25,9 +25,9 @@ const packageConfig = require('./package.json');
 // Read the control flags
 const devMode = process.env.NODE_ENV === 'development';
 const productionMode = !devMode;
-const proxyMode = process.env.npm_lifecycle_event === 'dev-proxy' &&
-  packageConfig.config &&
-  packageConfig.config.proxyURL;
+const proxyMode = process.env.npm_lifecycle_event === 'dev-proxy'
+  && packageConfig.config
+  && packageConfig.config.proxyURL;
 
 // Output filenames
 const cssOutputfilename = devMode ? '[name].css' : '[name].css'; // [hash].
@@ -46,10 +46,11 @@ const plugins = [
 if (devMode && !proxyMode) {
   plugins.push(
     ...prototypePages.map(
-      page => new HtmlWebpackPlugin({
-        filename: page + '.html',
-        template: 'src/' + page + '.html',
-      }))
+      (page) => new HtmlWebpackPlugin({
+        filename: `${page}.html`,
+        template: `src/${page}.html`,
+      }),
+    ),
   );
 }
 
@@ -79,16 +80,16 @@ if (proxyMode || productionMode) {
           path.resolve(__dirname, './css/template*.css'),
         ],
         copy: [{
-            source: path.resolve(__dirname, './dist/main.css'),
-            destination: path.resolve(__dirname, './css/template.css'),
-          },
-          {
-            source: path.resolve(__dirname, './dist/main.js'),
-            destination: path.resolve(__dirname, './css/template.js'),
-          }
-        ]
-      }
-    })
+          source: path.resolve(__dirname, './dist/main.css'),
+          destination: path.resolve(__dirname, './css/template.css'),
+        },
+        {
+          source: path.resolve(__dirname, './dist/main.js'),
+          destination: path.resolve(__dirname, './css/template.js'),
+        },
+        ],
+      },
+    }),
   );
 }
 
@@ -99,16 +100,16 @@ if (proxyMode && packageConfig.config && packageConfig.config.extraCCProxyFolder
     new FileManagerPlugin({
       onEnd: {
         copy: [{
-            source: path.resolve(__dirname, './dist/main.css'),
-            destination: path.resolve(packageConfig.config.extraCCProxyFolder, './css/template.css'),
-          },
-          {
-            source: path.resolve(__dirname, './dist/main.js'),
-            destination: path.resolve(packageConfig.config.extraCCProxyFolder, './js/template.js'),
-          }
-        ]
-      }
-    })
+          source: path.resolve(__dirname, './dist/main.css'),
+          destination: path.resolve(packageConfig.config.extraCCProxyFolder, './css/template.css'),
+        },
+        {
+          source: path.resolve(__dirname, './dist/main.js'),
+          destination: path.resolve(packageConfig.config.extraCCProxyFolder, './js/template.js'),
+        },
+        ],
+      },
+    }),
   );
 }
 
@@ -120,19 +121,19 @@ module.exports = {
     rules: [{
       test: /\.css$/,
       use: [{
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            hmr: devMode,
-          },
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+          hmr: devMode,
         },
+      },
 
-        // Load css
-        'css-loader',
+      // Load css
+      'css-loader',
 
-        // Load PostCss, see postcss.config.js
-        'postcss-loader',
+      // Load PostCss, see postcss.config.js
+      'postcss-loader',
       ],
-    }, ],
+    }],
   },
   plugins,
 };
