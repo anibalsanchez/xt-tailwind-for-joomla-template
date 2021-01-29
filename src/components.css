@@ -168,17 +168,8 @@
     @apply px-3 py-2 transition ease-in-out duration-150;
   }
 
-  .pagenav:active {
-    /* active:bg-gray-100 active:text-gray-500*/
-    @apply bg-gray-100 text-gray-500;
-  }
-  .pagenav:focus {
-    /* focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue */
-    @apply z-10 outline-none border-blue-300 shadow-outline-blue;
-  }
-  .pagenav:hover {
-    /* hover:text-gray-400 */
-    @apply text-gray-400;
+  .pagenav {
+    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue hover:text-gray-400;
   }
 
   @screen sm {
@@ -237,17 +228,8 @@ div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
     content: none !important;
   }
 
-  a:active {
-    /* active:bg-gray-100 active:text-gray-500*/
-    @apply bg-gray-100 text-gray-500;
-  }
-  a:focus {
-    /* focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue */
-    @apply z-10 outline-none border-blue-300 shadow-outline-blue;
-  }
-  a:hover {
-    /* hover:text-gray-400 */
-    @apply text-gray-400;
+  a {
+    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue hover:text-gray-400;
   }
 }
 
