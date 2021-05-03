@@ -17,10 +17,9 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
-    "@tailwindcss/ui": "^0.7.2",
     "autoprefixer": "^10.2.3",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
@@ -29,11 +28,11 @@
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.2.0",
     "postcss-nested": "^5.0.3",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.1.2"
   },
   "devDependencies": {
-    "browser-sync-webpack-plugin": "^2.2.2",
     "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "cross-env": "^7.0",
     "css-loader": "^4.2.1",
     "filemanager-webpack-plugin": "^2.0.5",
@@ -41,10 +40,10 @@
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-copy-on-build-plugin": "^1.0.4",
-    "webpack-dev-server": "^3.11.0",
-    "webpack": "^4.44.1"
+    "webpack-dev-server": "^3.11.0"
   },
   "config": {
     "proxyURL": "http://localhost:8080/index.php",
