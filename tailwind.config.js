@@ -10,10 +10,6 @@ const aspectRatio = require('@tailwindcss/aspect-ratio');
 const forms = require('@tailwindcss/forms');
 const lineClamp = require('@tailwindcss/line-clamp');
 const typography = require('@tailwindcss/typography');
-const ui = require('@tailwindcss/ui')({
-  layout: 'sidebar',
-});
-
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -88,6 +84,5 @@ module.exports = {
     forms,
     lineClamp,
     typography,
-    ui,
   ],
 };
