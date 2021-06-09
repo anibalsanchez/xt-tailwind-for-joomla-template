@@ -78,7 +78,10 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ['active'],
+    textColor: ['active', 'hover'],
+  },
   plugins: [
     aspectRatio,
     forms,

@@ -169,7 +169,7 @@
   }
 
   .pagenav {
-    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue hover:text-gray-400;
+    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring-blue-400 hover:text-gray-400;
   }
 
   @screen sm {
@@ -229,7 +229,7 @@ div.blog-block.prose > div.blog-featured > div.pagination > ul > li:before {
   }
 
   a {
-    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue hover:text-gray-400;
+    @apply active:bg-gray-100 active:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring-blue-400 hover:text-gray-400;
   }
 }
 
