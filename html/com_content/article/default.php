@@ -4,7 +4,7 @@
  * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
- * @copyright   Copyright (c)2019-2022 Extly, CB. All rights reserved.
+ * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
  * @license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
  *
  * @see         https://www.extly.com
@@ -13,7 +13,7 @@
 defined('_JEXEC') || exit;
 
 ob_start();
-require JPATH_ROOT . '/components/com_content/tmpl/article/default.php';
+require JPATH_ROOT.'/components/com_content/tmpl/article/default.php';
 $item = ob_get_contents();
 ob_end_clean();
 
