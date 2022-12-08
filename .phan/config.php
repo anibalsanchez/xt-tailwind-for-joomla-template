@@ -1,7 +1,7 @@
 <?php
 
 /*
- * @package     XT Search for Algolia
+ * @package     XT Tailwind for Joomla
  *
  * @author      Extly, CB. <team@extly.com>
  * @copyright   Copyright (c)2012-2022 Extly, CB. All rights reserved.
